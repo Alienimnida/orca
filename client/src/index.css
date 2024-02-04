@@ -1,0 +1,392 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Protest Riot', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Roboto:wght@100&display=swap');
+}
+
+@font-face {
+    font-family: "CCArea51Industrial";
+    src: url("https://db.onlinewebfonts.com/t/31a3bd3248e285356157b43f32c8e535.eot");
+    src: url("https://db.onlinewebfonts.com/t/31a3bd3248e285356157b43f32c8e535.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/31a3bd3248e285356157b43f32c8e535.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/31a3bd3248e285356157b43f32c8e535.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/31a3bd3248e285356157b43f32c8e535.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/31a3bd3248e285356157b43f32c8e535.svg#CCArea51Industrial")format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hello Headline W00 Regular";
+    src: url("https://db.onlinewebfonts.com/t/48c281b5af4a287544f8be3b33256618.eot");
+    src: url("https://db.onlinewebfonts.com/t/48c281b5af4a287544f8be3b33256618.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/48c281b5af4a287544f8be3b33256618.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/48c281b5af4a287544f8be3b33256618.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/48c281b5af4a287544f8be3b33256618.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/48c281b5af4a287544f8be3b33256618.svg#Hello Headline W00 Regular")format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.wave {
+    background-image: url("../src/assets/water2.gif");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 270px;
+}
+
+.content {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 80%;
+    position: relative;
+}
+
+.music {
+    float: right;
+
+    transform: rotate(15deg);
+}
+
+.mic {
+    width: auto;
+    height: 350px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+h2 {
+    font-style: italic;
+}
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.primary-title {
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+}
+
+.primary-button {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 15px;
+    background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+}
+
+.primary-button:hover {
+    background: linear-gradient(260deg, rgb(254, 48, 114), rgb(255, 89, 64));
+}
+
+.secondary-button {
+    color: rgba(59, 8, 69, 0.792);
+    background-color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 12px 12px;
+    border-radius: 30px;
+    border: solid 3px rgb(27, 6, 52);
+    margin: 6px;
+}
+
+.secondary-button:hover {
+    color: rgb(48, 48, 48);
+    border: solid 2px rgb(48, 48, 48);
+    font-weight: 800;
+}
+
+
+/*-------- Navbar --------*/
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav-button {
+    color: rgb(254, 48, 114);
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+}
+
+nav .nav-button:disabled {
+    background-color: rgb(181, 180, 180);
+    color: rgb(189, 42, 90);
+}
+
+nav .logo-container {
+    width: 170px;
+    margin: 15px;
+}
+
+nav .logo-container .logo {
+    width: 100%;
+}
+
+/*-------- Auth Modal --------*/
+.auth-modal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    height: 450px;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.auth-modal .close-icon {
+    float: right;
+}
+
+.auth-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-modal input[type=password],
+.auth-modal input[type=email] {
+    padding: 8px;
+    margin: 8px;
+    font-size: 17px;
+    border: solid 2px black;
+}
+
+/*-------- OnBoarding Page --------*/
+.onboarding {
+    border-top: solid 1px rgb(213, 213, 213);
+}
+
+.onboarding form {
+    display: flex;
+    justify-content: center;
+}
+
+.onboarding form section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 35%;
+    text-align: start;
+}
+
+.onboarding form input {
+    padding: 15px 30px;
+    margin: 10px 0;
+    font-size: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+}
+
+.onboarding form label {
+    margin: 10px 0;
+}
+
+.onboarding form .multiple-input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.onboarding form input::-webkit-outer-spin-button,
+.onboarding form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.onboarding form .multiple-input-container input {
+    margin-right: 10px;
+}
+
+.onboarding form .multiple-input-container label {
+    padding: 10px;
+    border: solid 2px rgb(144, 144, 144);
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
+.onboarding form input[type=radio] {
+    display: none;
+}
+
+.onboarding form input[type=number] {
+    width: 10%;
+}
+
+.onboarding form input[type=radio]:checked+label {
+    border: solid 2px rgb(221, 39, 22);
+}
+
+.onboarding form input[type=submit]:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.onboarding form input[type=submit]:active {
+    background-color: rgb(226, 115, 115);
+}
+
+.onboarding form .photo-container img {
+    width: 100%
+}
+
+/*-------- Dashboard  --------*/
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.dashboard .swipe-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    bottom: 100px;
+}
+
+.swipe {
+    position: absolute;
+    bottom: 80px;
+    top: 30px;
+    right: 330px;
+}
+
+.dashboard card-container {
+    width: 400px;
+    height: 650px;
+}
+
+.card {
+    position: relative;
+    background-color: #c13672;
+    width: 400px;
+    height: 650px;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    border: solid 4px rgb(46, 5, 48);
+}
+
+.cardContent {
+    width: 100%;
+    height: 100%;
+}
+
+.card h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-top: 0;
+}
+
+.card h3 {
+
+
+
+    color: rgb(241, 240, 239);
+}
+
+.dashboard .swipe-info {
+    position: absolute;
+    bottom: 0px;
+    padding: 10px;
+}
+
+
+/*-------- Chat Container --------*/
+.chat-container {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    width: 30%;
+    text-align: left;
+    z-index: 1;
+    border: solid 2px rgb(46, 5, 48);
+}
+
+.chat-container .chat-container-header {
+    background: linear-gradient(45deg, rgb(130, 35, 67), rgb(9, 22, 47));
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-container .option {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-bottom: solid 4px rgb(53, 7, 50);
+    font-size: 20px;
+    margin: 2px;
+    padding: 10px;
+}
+
+.chat-container .option:disabled {
+    border-bottom: solid 4px rgb(187, 187, 187);
+}
+
+.chat-container .profile,
+.chat-container .log-out-icon {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.img-container {
+    height: 40px;
+    width: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+    border: solid 1px white;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+/*-------- Chat Display --------*/
+.chat-display,
+.matches-display {
+    padding: 20px;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+/*-------- Chat Input --------*/
+.chat-input {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
